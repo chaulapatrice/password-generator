@@ -1,0 +1,50 @@
+@use "@/app/variables" as *;
+
+.checkBoxLabel {
+  color: $almost-white;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: $very-dark-grey;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid $almost-white;
+    border-radius: 0;
+    display: grid;
+    place-content: center;
+
+    &:hover {
+      border-color: $neon-green;
+    }
+
+    &::before {
+      content: "";
+      width: 1em;
+      height: 1em;
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      background-color: $neon-green;
+      background-image: url("icon-check.svg");
+      background-repeat: no-repeat;
+      background-size: 80%;
+      background-position: center;
+    }
+
+    &:checked {
+      border-color: $neon-green;
+    }
+
+    &:checked::before {
+      transform: scale(1);
+    }
+  }
+}
+
+

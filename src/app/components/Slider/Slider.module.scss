@@ -1,0 +1,58 @@
+@use "@/app/variables" as *;
+
+.sliderContainer {
+  width: 100%;
+  padding: 10px 0;
+  .sliderInfo {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    .sliderLabel {
+      color: $almost-white;
+    }
+    .sliderValue {
+      color: $neon-green;
+      font-size: 24px;
+    }
+  }
+
+  .slider {
+    & input {
+      width: 100%;
+      -webkit-appearance: none;
+      background: $very-dark-grey;
+      background-image: linear-gradient($neon-green, $neon-green);
+      background-size: 0% 100%;
+      background-repeat: no-repeat;
+      height: 10px;
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 30px;
+        height: 30px;
+        background-color: $almost-white;
+        border-radius: 50%;
+
+        &:hover {
+          background-color: $very-dark-grey;
+          border: $neon-green 2px solid;
+        }
+      }
+
+      &::-moz-range-thumb {
+        appearance: none;
+        width: 30px;
+        height: 30px;
+        background-color: $almost-white;
+        border-radius: 50%;
+        border: none;
+
+        &:hover {
+          background-color: $very-dark-grey;
+          border: $neon-green 2px solid;
+        }
+      }
+    }
+  }
+}

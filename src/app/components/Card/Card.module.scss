@@ -1,0 +1,9 @@
+@use "@/app/variables" as *;
+
+.card {
+  background-color: $dark-grey;
+  padding: 20px;
+  @media screen and (max-width: 500px) {
+    padding: 10px;
+  }
+}

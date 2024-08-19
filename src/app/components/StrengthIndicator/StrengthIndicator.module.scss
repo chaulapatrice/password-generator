@@ -1,0 +1,81 @@
+@use "@/app/variables" as *;
+
+.strengthIndicatorContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: $very-dark-grey;
+
+
+  @media screen and (max-width: 500px) {
+    padding: 10px;
+  }
+
+  .strengIndicatorTitle {
+    color: $almost-white;
+    text-transform: uppercase;
+    opacity: 0.3;
+    font-size: medium;
+  }
+
+  .strengIndicator {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+
+    @media screen and (max-width: 500px) {
+      gap: 2px;
+    }
+
+    .strengIndicatorLabel {
+      font-weight: bolder;
+      font-size: larger;
+      color: $almost-white;
+      text-transform: uppercase;
+    }
+
+    .strengIndicatorBars {
+      display: inline-flex;
+      gap: 10px;
+
+      @media screen and (max-width: 500px) {
+        gap: 5px;
+      }
+
+      .bar {
+        display: inline-block;
+        background: transparent;
+        height: 30px;
+        width: 12px;
+        border: $almost-white 2px solid;
+      }
+
+      .barTooWeak {
+        @extend .bar;
+        background: $red;
+        border-color: $red;
+      }
+
+      .barWeak {
+        @extend .bar;
+        background: $orange;
+        border-color: $orange;
+      }
+
+      .barMedium {
+        @extend .bar;
+        background: $yellow;
+        border-color: $yellow;
+      }
+
+      .barStrong {
+        @extend .bar;
+        background: $neon-green;
+        border-color: $neon-green;
+      }
+
+    }
+  }
+}

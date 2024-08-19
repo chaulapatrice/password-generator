@@ -1,0 +1,39 @@
+@use "@/app/variables" as *;
+
+.btn {
+  background-color: $neon-green;
+  border: $neon-green 2px solid;
+  padding: 20px;
+  text-transform: uppercase;
+
+   @media screen and (max-width: 500px) {
+    padding: 10px;
+    padding: 10px;
+  }
+
+  &:hover {
+    color: $neon-green;
+    background: $very-dark-grey;
+
+    svg {
+      path {
+        fill: $neon-green;
+      }
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  .startIcon {
+    margin-right: 4px;
+    display: inline-block;
+  }
+
+  .endIcon {
+    margin-left: 4px;
+    display: inline-block;
+  }
+}
+
